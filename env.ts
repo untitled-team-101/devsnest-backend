@@ -1,3 +1,4 @@
+// @ts-ignore
 import dotenv from 'dotenv'
 dotenv.config()
-export default dotenv
+export default dotenv;
