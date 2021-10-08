@@ -2,9 +2,7 @@ import './env'
 // @ts-ignore
 import Express, {Request, Response} from 'express'
 import apiRouter from './api'
-
 import database from "./utils/database";
-
 const PORT = process.env.PORT || 4000
 const app = Express()
 
