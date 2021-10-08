@@ -1,3 +1,4 @@
+// @ts-ignore
 import express from 'express'
 import register from "./register"
 import login from "./login"

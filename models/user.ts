@@ -1,9 +1,11 @@
-import database from "../utils/database"
+import sequelize from "../utils/database"
 import {DataTypes} from "sequelize"
 
-const user = database.define("user",{
-  userid: {
-    type: DataTypes.INTEGER,
+import Team from './team'
+
+const User = sequelize.define("user", {
+  userId: {
+    type: DataTypes.NUMBER,
     allowNull: false,
     primaryKey: true
   },
@@ -18,9 +20,15 @@ const user = database.define("user",{
   password: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  role: {
+    type: DataTypes.STRING,
+    allowNull: false
   }
 })
 
-export default user
+User.belongsTo(Team, {
+  foreignKey: 'teamId'
+})
 
-// User.belongsTo(Company, {foreignKey: 'fk_company'}); // Adds fk_company to User
+export default User

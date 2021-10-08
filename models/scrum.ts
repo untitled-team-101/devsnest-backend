@@ -1,12 +1,8 @@
-import { DataTypes } from "sequelize/types";
-import database from "../utils/database";
+import {DataTypes} from "sequelize/types";
 import sequelize from "../utils/database";
+import User from "./user";
 
 const Scrum = sequelize.define("scrum", {
-  userId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
   date: {
     type: DataTypes.DATE,
     allowNull: false,
@@ -38,5 +34,11 @@ const Scrum = sequelize.define("scrum", {
   sawClass: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
-  },
+  }
 });
+
+Scrum.belongsTo(User, {
+  foreignKey: 'userId'
+})
+
+export default Scrum;
