@@ -7,29 +7,29 @@ const add = async (req: Request, res: Response) => {
 
   const date = getDate();
 
-  const savedScrumData = await (await Scrum.create({
-    userId: userId,
-    date:date,
-    attendance: false,
-    thaCount: thaCount,
-    thaLink: thaLink,
-    backlog: backlog,
-    activity: activity,
-    rating: rating,
-    sawClass: sawClass
-  })).save()
+  const scrumData = await Scrum.findOne({where: {userId, date}});
 
-  res.send({
-    userId:userId,
-    date: date,
-    attendance: false,
-    thaCount: thaCount,
-    thaLink: thaLink,
-    backlog: backlog,
-    activity: activity,
-    rating: rating,
-    sawClass: sawClass
-  })
+  if(scrumData){
+    res.send({success: false, message: "Scrum data already added! You can only edit it!"})
+  }
+  else{
+    const savedScrumData = await (await Scrum.create({
+      userId: userId,
+      date:date,
+      attendance: false,
+      thaCount: thaCount,
+      thaLink: thaLink,
+      backlog: backlog,
+      activity: activity,
+      rating: rating,
+      sawClass: sawClass
+    })).save()
+    res.send({success: true, message: "Scrum data added!"});
+  }
+
+
+
+
 
 }
 

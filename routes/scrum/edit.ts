@@ -18,9 +18,10 @@ const add = async (req: Request, res: Response) => {
   const updatedData = await Scrum.update(updatableData,
     {where: {userId: userId, date: date}});
 
-  console.log(updatedData);
-
-  res.send("done!");
+  if(updatedData[0] > 0)
+    res.send({success:true, message: "Updated Scrum Data!"})
+  else
+    res.send({success:false, message:"Fill your Scrum Data first!"})
 
 }
 
