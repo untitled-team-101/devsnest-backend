@@ -1,8 +1,6 @@
 import {NextFunction, Request, Response} from "express";
 // @ts-ignore
 import jwt from "jsonwebtoken";
-import User from "../models/user";
-
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "access_token"
 
 const checkSigned = async (req: Request, res: Response, next: NextFunction) => {
@@ -11,16 +9,26 @@ const checkSigned = async (req: Request, res: Response, next: NextFunction) => {
     const jwtToken = authHeader
       .replace("Bearer ", "")
       .replace("Bearer", "")
-    const data = jwt.verify(jwtToken, ACCESS_TOKEN_SECRET)
-    if(data)
+
+    jwt.verify(jwtToken, ACCESS_TOKEN_SECRET, function (err: any, decoded: any) {
+      if (err) {
+        return res.status(401).send({
+          success: false,
+          message: "token not valid"
+        })
+      }
+      // @ts-ignore
+      req.user = {
+        userId: decoded.userId || 1,
+        roles: JSON.parse(decoded.role || "['USER']"),
+        email: decoded.email || "email@mail.com",
+        name: decoded.name || "User Name"
+      }
       return next()
-    res.status(401).send({
-      status: 'error',
-      message: "user not found"
     })
   } catch (err) {
     res.status(401).send({
-      status: 'error',
+      success: false,
       message: "token not valid"
     })
   }

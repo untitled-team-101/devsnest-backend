@@ -6,4 +6,5 @@ const verify = async (req:Request, res:Response) => {
     message: "Login Credentials are valid"
   })
 }
+
 export default verify;
