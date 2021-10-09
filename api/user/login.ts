@@ -3,13 +3,13 @@ import User from "../../models/user";
 import bcrypt from "bcrypt";
 import { jwt } from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET || "";
+const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "";
 
 const login = async ( req: Request, res: Response) => {
   let { email, password } = req.body;
   const userData: any = await User.findOne({ where: { email } });
   if (!userData) {
-    return res.status(404).json({
+    return res.status(200).json({
       message: "Username is not found. Invalid login credentials.",
       success: false,
     });
@@ -23,7 +23,7 @@ const login = async ( req: Request, res: Response) => {
         name: userData.name,
         email: userData.email,
       },
-      JWT_SECRET,
+      ACCESS_TOKEN_SECRET,
       { expiresIn: "7 days" }
     );
 
