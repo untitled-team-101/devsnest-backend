@@ -51,6 +51,4 @@ const BLFeedback = sequelize.define("blfeedback", {
   }
 })
 
-
-
 export default BLFeedback;

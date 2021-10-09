@@ -42,8 +42,4 @@ const Scrum = sequelize.define("scrum", {
   }
 });
 
-Scrum.belongsTo(User, {
-  foreignKey: 'userId'
-})
-
 export default Scrum;
