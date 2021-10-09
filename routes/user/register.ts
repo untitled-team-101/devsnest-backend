@@ -1,7 +1,7 @@
-import {Request, Response} from "express";
-import User from "../../models/user";
+import {Request, Response} from "express"
+import User from "../../models/user"
 // @ts-ignore
-import jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken"
 // @ts-ignore
 import bcrypt from "bcrypt"
 
@@ -13,7 +13,7 @@ const register = async (req: Request, res: Response) => {
 
   const userData: any = await User.findOne({where: {email}});
   if (userData) {
-    return res.status(406).json({
+    return res.status(200).json({
       message: "User already registered!",
       success: false
     });
@@ -28,6 +28,8 @@ const register = async (req: Request, res: Response) => {
     role: JSON.stringify(["USER"])
   })).save()
 
+  console.log(savedUserData)
+
   const token = jwt.sign({
       userId: 1234,
       email: email,
@@ -35,7 +37,8 @@ const register = async (req: Request, res: Response) => {
       role: JSON.stringify(["USER"])
     },
     ACCESS_TOKEN_SECRET,
-    {expiresIn: "7 days"})
+    {expiresIn: 7 * 24 * 60 * 60,}
+  )
 
   res.send({
     userId: 1234,
@@ -43,9 +46,9 @@ const register = async (req: Request, res: Response) => {
     role: JSON.stringify(["USER"]),
     email: email,
     name: name,
+    expiresIn: 7 * 24 * 60 * 60,
     success: true
   })
 }
-
 
 export default register;
