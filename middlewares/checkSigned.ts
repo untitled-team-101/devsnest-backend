@@ -20,7 +20,7 @@ const checkSigned = async (req: Request, res: Response, next: NextFunction) => {
       // @ts-ignore
       req.user = {
         userId: decoded.userId || 1,
-        roles: JSON.parse(decoded.role || "['USER']"),
+        roles: decoded.roles || ['USER'],
         email: decoded.email || "email@mail.com",
         name: decoded.name || "User Name"
       }

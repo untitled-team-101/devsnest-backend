@@ -1,9 +1,18 @@
+###
 POST http://localhost:4000/api/team/create
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiODc1OTg1N2ExNTc2YTQ0Iiwicm9sZSI6IltcIlVTRVJcIixcIkFETUlOXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM4MTA3MjcsImV4cCI6MTYzNDQxNTUyN30.fcPYePV150Op7Yrfsq71pbjuIw7RHtj47S3Td0iEbB4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZGY1MmZiMWU2NjFhNTE0Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2RoQGRldnNuZXQuY29tIiwiaWF0IjoxNjMzODE5ODE4LCJleHAiOjE2MzQ0MjQ2MTh9.WdqIkJQSy3mx-i1YhWgSlR3NBuRs1fa_8uL2jboXxaU
 
 {
-  "name": "Untitled"
+  "name": "Untitled 2"
 }
 
 ###
+PUT http://localhost:4000/api/team/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZGY1MmZiMWU2NjFhNTE0Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2RoQGRldnNuZXQuY29tIiwiaWF0IjoxNjMzODE5ODE4LCJleHAiOjE2MzQ0MjQ2MTh9.WdqIkJQSy3mx-i1YhWgSlR3NBuRs1fa_8uL2jboXxaU
+
+{
+  "teamId": "fa64410cfdad",
+  "userId": "65c6d84dcddc8bc9"
+}

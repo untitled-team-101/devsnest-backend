@@ -1,8 +1,13 @@
 import {Request, Response} from "express"
 import User from "../../models/user"
+// @ts-ignore
 import jwt from "jsonwebtoken"
+// @ts-ignore
 import bcrypt from "bcrypt"
+// @ts-ignore
 import crypto from 'crypto'
+
+import roles from '../../utils/roles'
 
 const BCRYPT_SALT_ROUNDS = Number(process.env.BCRYPT_SALT_ROUNDS || 10)
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "access_token"
@@ -29,7 +34,7 @@ const register = async (req: Request, res: Response) => {
     name: name,
     email: email,
     password: hashedPassword,
-    role: JSON.stringify(["USER"])
+    roles: JSON.stringify([roles.user])
   })).save()
 
   console.log(savedUserData)
@@ -38,7 +43,7 @@ const register = async (req: Request, res: Response) => {
       userId: userId,
       email: email,
       name: name,
-      role: JSON.stringify(["USER"])
+      roles: [roles.user]
     },
     ACCESS_TOKEN_SECRET,
     {expiresIn: 7 * 24 * 60 * 60,}
@@ -48,7 +53,7 @@ const register = async (req: Request, res: Response) => {
   res.send({
     userId: userId,
     token: token,
-    role: JSON.stringify(["USER"]),
+    roles: [roles.user],
     email: email,
     name: name,
     expiresIn: 7 * 24 * 60 * 60,

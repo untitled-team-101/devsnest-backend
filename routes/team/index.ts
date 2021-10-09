@@ -4,10 +4,12 @@ import createTeam from "./createTeam";
 import removeMember from "./removeMember";
 import addMember from "./addMember";
 import checkAdmin from "../../middlewares/checkAdmin";
+import getMembers from "./getMembers";
 const router = express.Router();
 
 router.post("/create", checkAdmin, createTeam)
-router.post("/remove", checkAdmin, removeMember)
-router.post("/add", checkAdmin, addMember)
+router.put("/add", checkAdmin, addMember)
+router.put("/remove", checkAdmin, removeMember)
+router.get("/members", getMembers)
 
 export default router;

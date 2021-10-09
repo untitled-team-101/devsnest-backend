@@ -1,5 +1,6 @@
 import {Request, Response} from "express";
 import Team from "../../models/team";
+// @ts-ignore
 import crypto from 'crypto'
 
 // /api/team/create POST

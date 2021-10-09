@@ -1,6 +1,5 @@
 import {DataTypes} from "sequelize";
 import sequelize from "../utils/database";
-import User from "./user";
 
 const Scrum = sequelize.define("scrum", {
   date: {

@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "name": "Piyush Nadoda",
-  "email": "piyush@ut.com",
+  "email": "piyusdh@devs.com",
   "password": "Bahubali@123",
   "confirmPassword": "Bahubali@123"
 }
@@ -14,8 +14,8 @@ POST http://localhost:4000/api/user/login
 Content-Type: application/json
 
 {
-  "name": "TanmayVaish",
-  "email": "piyush@ut.com",
+  "name": "Piyush Nadoda",
+  "email": "piyusdh@devsnet.com",
   "password": "Bahubali@123",
   "confirmPassword": "Bahubali@123"
 }
@@ -23,5 +23,5 @@ Content-Type: application/json
 ### verify login
 GET http://localhost:4000/api/user/verify
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyYTVhNDg5OTFkNjhiIiwicm9sZSI6IltcIlVTRVJcIixcIlRMXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM3OTgxMzksImV4cCI6MTYzNDQwMjkzOX0.X4RG0A0VDmJcuJnLHKbgOWpcYm2D53LiH8DMTI7qEs0
-###
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZGY1MmZiMWU2NjFhNTE0Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2RoQGRldnNuZXQuY29tIiwiaWF0IjoxNjMzODE5ODE4LCJleHAiOjE2MzQ0MjQ2MTh9.WdqIkJQSy3mx-i1YhWgSlR3NBuRs1fa_8uL2jboXxaU
+

@@ -1,6 +1,5 @@
 import sequelize from '../utils/database'
 import {DataTypes} from "sequelize";
-import Team from "./team";
 
 const BLFeedback = sequelize.define("blfeedback", {
   teamId:{
@@ -9,7 +8,7 @@ const BLFeedback = sequelize.define("blfeedback", {
     primaryKey: true
   },
   coordination: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.INTEGER, // 1-5
     allowNull: false,
   },
   tlAvailability: {
@@ -20,12 +19,12 @@ const BLFeedback = sequelize.define("blfeedback", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  doubtTaker: {
-    type: DataTypes.STRING,
+  doubtTakers: {
+    type: DataTypes.STRING, // array
     allowNull: false,
   },
   rating: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.INTEGER, // 0-5
     allowNull: false,
   },
   videoScrum: {

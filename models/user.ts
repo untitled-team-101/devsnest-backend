@@ -1,7 +1,6 @@
 import sequelize from "../utils/database"
 import {DataTypes} from "sequelize"
 
-import Team from './team'
 const User = sequelize.define("user", {
   userId: {
     type: DataTypes.STRING,
@@ -20,7 +19,7 @@ const User = sequelize.define("user", {
     type: DataTypes.STRING,
     allowNull: false
   },
-  role: {
+  roles: {
     type: DataTypes.STRING,
     allowNull: false
   },

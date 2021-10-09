@@ -21,7 +21,7 @@ const login = async ( req: Request, res: Response) => {
     let token = jwt.sign(
       {
         userId: userData.userId,
-        role: userData.role,
+        roles: JSON.parse(userData.roles),
         name: userData.name,
         email: userData.email,
       },
@@ -34,7 +34,7 @@ const login = async ( req: Request, res: Response) => {
       name: userData.name,
       email: userData.email,
       token: token,
-      role: JSON.parse(userData.role),
+      roles: JSON.parse(userData.roles),
       expiresIn: 7 * 24 * 60 * 60,
       message: "Hurray! You are now logged in.",
       success: true,
