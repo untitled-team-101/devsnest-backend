@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 // @ts-ignore
 import jwt from "jsonwebtoken";
 
-const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "";
+const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "access_token";
 
 const login = async ( req: Request, res: Response) => {
   let { email, password } = req.body;
@@ -26,17 +26,16 @@ const login = async ( req: Request, res: Response) => {
         email: userData.email,
       },
       ACCESS_TOKEN_SECRET,
-      { expiresIn: "7 days" }
+      { expiresIn: 7 * 24 * 60 * 60 }
     );
 
-    let result = {
+    return res.status(200).json({
+      userId: userData.userId,
       name: userData.name,
       email: userData.email,
-      token: `Bearer ${token}`,
-      expiresIn: 7 * 24 * 60 * 60 * 1000,
-    };
-    return res.status(200).json({
-      ...result,
+      token: token,
+      role: JSON.stringify(["USER"]),
+      expiresIn: 7 * 24 * 60 * 60,
       message: "Hurray! You are now logged in.",
       success: true,
     });
