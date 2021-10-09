@@ -1,8 +1,9 @@
 POST http://localhost:4000/api/scrum/set
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmJhNTFhMmVmNDVkODcyIiwiZW1haWwiOiJHb2JsaW5AZGV2c25ldC5jb20iLCJuYW1lIjoiR29ibGluIFNhbmdlciIsInJvbGUiOiJbXCJVU0VSXCJdIiwiaWF0IjoxNjMzODAyMDQ5LCJleHAiOjE2MzQ0MDY4NDl9.LReF0WCxst3-QvSXw4CMSDjAVf2S7ecvS8ZdZOaFxPU
 
 {
-  "userId":"6f77243707267307",
+  "userId":"22ba51a2ef45d872",
   "attendance": true,
   "thaCount": 55,
   "thaLink": "https://github.com/untitled-team-101/devsnest-backend/pull/4/files",

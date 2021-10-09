@@ -3,6 +3,11 @@ import {DataTypes} from "sequelize";
 import Team from "./team";
 
 const BLFeedback = sequelize.define("blfeedback", {
+  teamId:{
+    type:DataTypes.STRING,
+    allowNull:false,
+    primaryKey: true
+  },
   coordination: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -40,13 +45,12 @@ const BLFeedback = sequelize.define("blfeedback", {
     allowNull: false,
   },
   date: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
     allowNull: false,
+    primaryKey: true
   }
 })
 
-BLFeedback.belongsTo(Team, {
-  foreignKey: "teamId"
-})
+
 
 export default BLFeedback;

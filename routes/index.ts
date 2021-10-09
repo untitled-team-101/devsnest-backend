@@ -2,11 +2,14 @@
 import express, {Request, Response} from 'express'
 import userRouter from './user'
 import scrumRouter from './scrum'
+import blfeedbackRouter from './blfeedback'
+import checkSigned from "../middlewares/checkSigned";
 
 const router = express.Router()
 
 router.use("/user", userRouter)
-router.use("/scrum", scrumRouter)
+router.use("/scrum",checkSigned, scrumRouter)
+router.use("/blfeedback", checkSigned, blfeedbackRouter)
 
 router.use("/", (req:Request, res:Response)=>{
   res.status(404)

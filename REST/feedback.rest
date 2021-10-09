@@ -1,0 +1,18 @@
+POST http://localhost:4000/api/blfeedback/feedback
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmJhNTFhMmVmNDVkODcyIiwiZW1haWwiOiJHb2JsaW5AZGV2c25ldC5jb20iLCJuYW1lIjoiR29ibGluIFNhbmdlciIsInJvbGUiOiJbXCJVU0VSXCJdIiwiaWF0IjoxNjMzODAyMDQ5LCJleHAiOjE2MzQ0MDY4NDl9.LReF0WCxst3-QvSXw4CMSDjAVf2S7ecvS8ZdZOaFxPU
+
+{
+  "teamId": "12312jn213",
+  "coordination": 3,
+  "tlAvailability": 1,
+  "vtlAvailability": 2,
+  "doubtTaker": "Ayan",
+  "rating": 3,
+  "videoScrum": true,
+  "tlTha": 10,
+  "vtlTha": 12,
+  "remarks": "sab log mil ke hum chutiya bana re!!"
+}
+
+###
