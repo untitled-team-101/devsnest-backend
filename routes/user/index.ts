@@ -3,11 +3,12 @@ import express from 'express'
 import register from "./register"
 import login from "./login"
 import verify from "./verify"
+import registerInitialChecks from "../../middlewares/registerInitialChecks";
 
 const router = express.Router()
 
-// /api/user/register
-router.post("/register", register)
+// /routes/user/register
+router.post("/register", registerInitialChecks, register)
 router.post("/login", login)
 router.post("/verify", verify)
 

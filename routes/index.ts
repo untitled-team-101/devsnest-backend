@@ -1,14 +1,15 @@
-import {NextFunction, Request, Response} from "express";
-import express from "express";
-import registerInitialChecks from "../middlewares/registerInitialChecks";
-import register from "../controllers/register";
+// @ts-ignore
+import express, {Request, Response} from 'express'
+import userRouter from './user'
 
-var router = express.Router();
+const router = express.Router()
 
-router.get('/', (req: Request, res: Response, next: NextFunction) => {
-    res.render('index', {title: 'Express'});
+router.use("/user", userRouter)
+
+router.use("/", (req:Request, res:Response)=>{
+  res.status(404)
+    .send("Not Found")
+  console.log("ye hai yaha!")
 })
 
-router.post('/register', registerInitialChecks, register);
-
-export default router;
+export default router

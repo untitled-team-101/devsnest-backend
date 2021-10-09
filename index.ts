@@ -1,22 +1,25 @@
 import './env'
 // @ts-ignore
 import Express, {Request, Response} from 'express'
-import apiRouter from './api'
+import apiRouter from './routes'
 import database from "./utils/database";
+
 const PORT = process.env.PORT || 4000
-const app = Express()
+const app = Express();
+
+app.use(Express.json())
 
 app.use('/api', apiRouter)
 
-app.use("/", (req: Request, res: Response)=>{
+app.use("/", (req: Request, res: Response) => {
   res.status(404)
     .send("Not Found")
 })
 
 database.sync()
-  .then(()=>{
+  .then(() => {
     console.log("Connected to database")
-    app.listen(PORT, ()=>{
+    app.listen(PORT, () => {
       console.log(`App running on ${PORT}`)
     })
   })
