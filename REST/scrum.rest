@@ -33,3 +33,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyY
   "userId": "667a8c748b60ec88",
   "attendance": true
 }
+
+
+###
+
+GET http://localhost:4000/api/scrum/view?userid=667a8c748b60ec88&date=2021-10-09
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyYTVhNDg5OTFkNjhiIiwicm9sZSI6IltcIlVTRVJcIixcIlRMXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM3OTgxMzksImV4cCI6MTYzNDQwMjkzOX0.X4RG0A0VDmJcuJnLHKbgOWpcYm2D53LiH8DMTI7qEs0
