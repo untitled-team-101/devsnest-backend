@@ -4,7 +4,7 @@ import User from "./user";
 
 const Scrum = sequelize.define("scrum", {
   date: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   attendance: {

@@ -2,7 +2,6 @@ import sequelize from "../utils/database"
 import {DataTypes} from "sequelize"
 
 import Team from './team'
-
 const User = sequelize.define("user", {
   userId: {
     type: DataTypes.BIGINT,
