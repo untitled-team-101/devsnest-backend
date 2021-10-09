@@ -2,12 +2,12 @@ import sequelize from "../utils/database"
 import {DataTypes} from "sequelize"
 
 import Team from './team'
+
 const User = sequelize.define("user", {
   userId: {
-    type: DataTypes.BIGINT,
+    type: DataTypes.STRING,
     allowNull: false,
     primaryKey: true,
-    autoIncrement:true
   },
   name: {
     type: DataTypes.STRING,
