@@ -2,7 +2,8 @@ import sequelize from "../utils/database"
 import {DataTypes} from "sequelize"
 
 import Team from './team'
-
+import internal from "stream"
+ 
 const User = sequelize.define("user", {
   userId: {
     type: DataTypes.NUMBER,
