@@ -23,11 +23,11 @@ const User = sequelize.define("user", {
   role: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  teamId: {
+    type: DataTypes.STRING,
+    allowNull: true
   }
-})
-
-User.belongsTo(Team, {
-  foreignKey: 'teamId'
 })
 
 export default User

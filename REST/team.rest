@@ -1,0 +1,9 @@
+POST http://localhost:4000/api/team/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiODc1OTg1N2ExNTc2YTQ0Iiwicm9sZSI6IltcIlVTRVJcIixcIkFETUlOXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM4MTA3MjcsImV4cCI6MTYzNDQxNTUyN30.fcPYePV150Op7Yrfsq71pbjuIw7RHtj47S3Td0iEbB4
+
+{
+  "name": "Untitled"
+}
+
+###

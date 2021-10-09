@@ -3,7 +3,7 @@ import sequelize from "../utils/database";
 
 const Team = sequelize.define("team", {
   teamId: {
-    type: DataTypes.BIGINT,
+    type: DataTypes.STRING,
     allowNull: false,
     primaryKey: true
   },
@@ -12,8 +12,8 @@ const Team = sequelize.define("team", {
     allowNull: false,
   },
   batchLeader: {
-    type: DataTypes.BIGINT,
-    allowNull: false
+    type: DataTypes.STRING,
+    allowNull: true
   },
 })
 

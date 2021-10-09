@@ -1,9 +1,8 @@
 import {Request, Response} from "express"
 import User from "../../models/user"
-// @ts-ignore
 import jwt from "jsonwebtoken"
-// @ts-ignore
 import bcrypt from "bcrypt"
+import crypto from 'crypto'
 
 const BCRYPT_SALT_ROUNDS = Number(process.env.BCRYPT_SALT_ROUNDS || 10)
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "access_token"
@@ -11,7 +10,7 @@ const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "access_token"
 const register = async (req: Request, res: Response) => {
   const {email, password, name} = req.body;
 
-  const userId =  require('crypto').randomBytes(8).toString('hex')
+  const userId =  crypto.randomBytes(8).toString('hex')
 
   console.log(userId);
 
@@ -24,7 +23,6 @@ const register = async (req: Request, res: Response) => {
   }
 
   const hashedPassword = bcrypt.hashSync(password, BCRYPT_SALT_ROUNDS);
-
 
   const savedUserData = await (await User.create({
     userId: userId,

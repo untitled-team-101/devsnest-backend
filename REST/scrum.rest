@@ -14,7 +14,6 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmJhNTFhMmVm
 }
 
 ###
-
 PUT http://localhost:4000/api/scrum/set
 Content-Type: application/json
 
@@ -24,7 +23,6 @@ Content-Type: application/json
 }
 
 ###
-
 POST http://localhost:4000/api/scrum/attendance
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyYTVhNDg5OTFkNjhiIiwicm9sZSI6IltcIlVTRVJcIixcIlRMXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM3OTk3MzAsImV4cCI6MTYzNDQwNDUzMH0._P2rXCf861Efvnav0grdbcAuRD4657b0krsTo2wbo9M
@@ -34,9 +32,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyY
   "attendance": true
 }
 
-
 ###
-
 GET http://localhost:4000/api/scrum/view?userid=667a8c748b60ec88&date=2021-10-09
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyYTVhNDg5OTFkNjhiIiwicm9sZSI6IltcIlVTRVJcIixcIlRMXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM3OTgxMzksImV4cCI6MTYzNDQwMjkzOX0.X4RG0A0VDmJcuJnLHKbgOWpcYm2D53LiH8DMTI7qEs0
