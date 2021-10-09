@@ -34,7 +34,7 @@ const login = async ( req: Request, res: Response) => {
       name: userData.name,
       email: userData.email,
       token: token,
-      role: JSON.stringify(["USER"]),
+      role: JSON.parse(userData.role),
       expiresIn: 7 * 24 * 60 * 60,
       message: "Hurray! You are now logged in.",
       success: true,

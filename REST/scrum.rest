@@ -2,7 +2,7 @@ POST http://localhost:4000/api/scrum/set
 Content-Type: application/json
 
 {
-  "userId":"6f77243707267307",
+  "userId":"667a8c748b60ec88",
   "attendance": true,
   "thaCount": 55,
   "thaLink": "https://github.com/untitled-team-101/devsnest-backend/pull/4/files",
@@ -18,6 +18,17 @@ PUT http://localhost:4000/api/scrum/set
 Content-Type: application/json
 
 {
-  "userId": "6f77243707267307",
+  "userId": "667a8c748b60ec88",
   "thaCount": 69
+}
+
+###
+
+POST http://localhost:4000/api/scrum/attendance
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyYTVhNDg5OTFkNjhiIiwicm9sZSI6IltcIlVTRVJcIixcIlRMXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM3OTk3MzAsImV4cCI6MTYzNDQwNDUzMH0._P2rXCf861Efvnav0grdbcAuRD4657b0krsTo2wbo9M
+
+{
+  "userId": "667a8c748b60ec88",
+  "attendance": true
 }
