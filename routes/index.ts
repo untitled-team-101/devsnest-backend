@@ -9,6 +9,7 @@ router.use("/user", userRouter)
 router.use("/", (req:Request, res:Response)=>{
   res.status(404)
     .send("Not Found")
+  console.log("ye hai yaha!")
 })
 
 export default router

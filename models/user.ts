@@ -6,9 +6,10 @@ import internal from "stream"
  
 const User = sequelize.define("user", {
   userId: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.BIGINT,
     allowNull: false,
-    primaryKey: true
+    primaryKey: true,
+    autoIncrement:true
   },
   name: {
     type: DataTypes.STRING,

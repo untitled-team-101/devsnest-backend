@@ -1,9 +1,9 @@
-import {DataTypes} from "sequelize/types";
+import {DataTypes} from "sequelize";
 import sequelize from "../utils/database";
 
 const Team = sequelize.define("team", {
   teamId: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.BIGINT,
     allowNull: false,
     primaryKey: true
   },
@@ -12,7 +12,7 @@ const Team = sequelize.define("team", {
     allowNull: false,
   },
   batchLeader: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.BIGINT,
     allowNull: false
   },
 })

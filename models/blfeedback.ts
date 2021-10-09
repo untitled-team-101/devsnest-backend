@@ -1,5 +1,5 @@
 import sequelize from '../utils/database'
-import {DataTypes} from "sequelize/types";
+import {DataTypes} from "sequelize";
 import Team from "./team";
 
 const BLFeedback = sequelize.define("blfeedback", {

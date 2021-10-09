@@ -1,7 +1,9 @@
 import { Request, Response } from "express";
 import User from "../../models/user";
+// @ts-ignore
 import bcrypt from "bcrypt";
-import { jwt } from "jsonwebtoken";
+// @ts-ignore
+import jwt from "jsonwebtoken";
 
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "";
 
