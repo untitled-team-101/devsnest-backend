@@ -2,7 +2,7 @@ import {Request, Response} from "express";
 import Scrum from "../../models/scrum";
 import getDate from "../../utils/getDate"
 
-const add = async (req: Request, res: Response) => {
+const edit = async (req: Request, res: Response) => {
   const {userId, thaCount, thaLink, backlog, activity, rating, sawClass} = req.body;
 
   const date = getDate();
@@ -33,4 +33,4 @@ const add = async (req: Request, res: Response) => {
 
 }
 
-export default add;
+export default edit;
