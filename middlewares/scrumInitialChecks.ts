@@ -8,17 +8,17 @@ const scrumInitialChecks = (req:Request, res: Response, next:NextFunction) => {
         if(activity){
           if(sawClass){
             if(rating) next()
-            else res.status(406).send("Please provide rating!");
+            else res.send({success: false, message:"Please provide rating!"});
           }
           else next();
         }
-        else res.status(406).send("Please provide Today's Activity!");
+        else res.send({success: false, message:"Please provide Today's Activity!"});
       }
-      else res.status(406).send("Please Provide Backlog Reason!");
+      else res.send( {success: false, message:"Please Provide Backlog Reason!"});
     }
-    else res.status(406).send("Please provide your THA Link!");
+    else res.send( {success: false, message:"Please provide your THA Link!"});
   }
-  else res.status(406).send("Please provide you THA Count!");
+  else res.send( {success: false, message:"Please provide you THA Count!"});
 }
 
 export default scrumInitialChecks;

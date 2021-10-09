@@ -1,0 +1,23 @@
+POST http://localhost:4000/api/scrum/set
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "attendance": false,
+  "thaCount": 5,
+  "thaLink": "https://github.com/untitled-team-101/devsnest-backend/pull/4/files",
+  "backlog": "NOne",
+  "activity": "nacha",
+  "rating": 4,
+  "sawClass": false
+}
+
+###
+
+PUT http://localhost:4000/api/scrum/set
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "thaCount": 69
+}

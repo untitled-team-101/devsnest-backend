@@ -3,11 +3,12 @@ import Scrum from "../../models/scrum";
 import getDate from "../../utils/getDate"
 
 const add = async (req: Request, res: Response) => {
-  const {thaCount, thaLink, backlog, activity, rating, sawClass} = req.body;
+  const {userId, thaCount, thaLink, backlog, activity, rating, sawClass} = req.body;
 
   const date = getDate();
 
   const savedScrumData = await (await Scrum.create({
+    userId: userId,
     date:date,
     attendance: false,
     thaCount: thaCount,
@@ -19,6 +20,7 @@ const add = async (req: Request, res: Response) => {
   })).save()
 
   res.send({
+    userId:userId,
     date: date,
     attendance: false,
     thaCount: thaCount,
