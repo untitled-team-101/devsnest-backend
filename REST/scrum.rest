@@ -2,11 +2,11 @@ POST http://localhost:4000/api/scrum/set
 Content-Type: application/json
 
 {
-  "userId": 3,
-  "attendance": false,
+  "userId":"6f77243707267307",
+  "attendance": true,
   "thaCount": 55,
   "thaLink": "https://github.com/untitled-team-101/devsnest-backend/pull/4/files",
-  "backlog": "NOne",
+  "backlog": "distro hopping",
   "activity": "nacha",
   "rating": 4,
   "sawClass": false
@@ -18,6 +18,6 @@ PUT http://localhost:4000/api/scrum/set
 Content-Type: application/json
 
 {
-  "userId": 2,
-  "thaCount": 554
+  "userId": "6f77243707267307",
+  "thaCount": 69
 }

@@ -11,6 +11,10 @@ const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "access_token"
 const register = async (req: Request, res: Response) => {
   const {email, password, name} = req.body;
 
+  const userId =  require('crypto').randomBytes(8).toString('hex')
+
+  console.log(userId);
+
   const userData: any = await User.findOne({where: {email}});
   if (userData) {
     return res.status(406).json({
@@ -21,7 +25,9 @@ const register = async (req: Request, res: Response) => {
 
   const hashedPassword = bcrypt.hashSync(password, BCRYPT_SALT_ROUNDS);
 
+
   const savedUserData = await (await User.create({
+    userId: userId,
     name: name,
     email: email,
     password: hashedPassword,
@@ -29,7 +35,7 @@ const register = async (req: Request, res: Response) => {
   })).save()
 
   const token = jwt.sign({
-      userId: 1234,
+      userId: userId,
       email: email,
       name: name,
       role: JSON.stringify(["USER"])
@@ -37,8 +43,9 @@ const register = async (req: Request, res: Response) => {
     ACCESS_TOKEN_SECRET,
     {expiresIn: "7 days"})
 
+  console.log(token);
   res.send({
-    userId: 1234,
+    userId: userId,
     token: token,
     role: JSON.stringify(["USER"]),
     email: email,

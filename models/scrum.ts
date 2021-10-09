@@ -6,6 +6,7 @@ const Scrum = sequelize.define("scrum", {
   date: {
     type: DataTypes.STRING,
     allowNull: false,
+    primaryKey:true
   },
   attendance: {
     type: DataTypes.BOOLEAN,
@@ -34,6 +35,10 @@ const Scrum = sequelize.define("scrum", {
   sawClass: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
+  },
+  userId:{
+    type: DataTypes.STRING,
+    primaryKey: true
   }
 });
 
