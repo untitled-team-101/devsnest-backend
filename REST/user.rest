@@ -3,8 +3,8 @@ POST http://localhost:4000/api/user/register
 Content-Type: application/json
 
 {
-  "name": "Goblin Sanger",
-  "email": "Goblin@devsnet.com",
+  "name": "Piyush Nadoda",
+  "email": "piyush@ut.com",
   "password": "Bahubali@123",
   "confirmPassword": "Bahubali@123"
 }
@@ -14,8 +14,8 @@ POST http://localhost:4000/api/user/login
 Content-Type: application/json
 
 {
-  "name": "Goblin Sanger",
-  "email": "Goblin@devsnet.com",
+  "name": "TanmayVaish",
+  "email": "piyush@ut.com",
   "password": "Bahubali@123",
   "confirmPassword": "Bahubali@123"
 }
@@ -23,6 +23,7 @@ Content-Type: application/json
 ### verify login
 GET http://localhost:4000/api/user/verify
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwicm9sZSI6IltcIlVTRVJcIl0iLCJuYW1lIjoiVGFubWF5VmFpc2giLCJlbWFpbCI6ImJ1bWNoaWtAai5jb20iLCJpYXQiOjE2MzM3NzQ1NzIsImV4cCI6MTYzNDM3OTM3Mn0.8yljyAIeTGBxTfwzjX1O0dLYps4d-3Qlizq2gQs06qM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyYTVhNDg5OTFkNjhiIiwicm9sZSI6IltcIlVTRVJcIixcIlRMXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM3OTgxMzksImV4cCI6MTYzNDQwMjkzOX0.X4RG0A0VDmJcuJnLHKbgOWpcYm2D53LiH8DMTI7qEs0
+
 
 ###
