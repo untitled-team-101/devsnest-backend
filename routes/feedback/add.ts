@@ -1,9 +1,11 @@
 import {Request, Response} from "express";
 import getDate from "../../utils/getDate";
 import BLFeedback from "../../models/blfeedback";
+import {DataTypes} from "sequelize";
+import getWeek from "../../utils/getWeek";
 
+// POST /api/feedback/batch-leader
 const add = async (req: Request, res: Response) => {
-
   const {
     teamId,
     coordination,
@@ -17,10 +19,8 @@ const add = async (req: Request, res: Response) => {
     remarks
   } = req.body;
 
-  const date = getDate();
-
-  const blfeedbackData = await BLFeedback.findOne({where: {teamId, date}});
-
+  const week = getWeek()
+  const blfeedbackData = await BLFeedback.findOne({where: {teamId, week}});
   console.log(blfeedbackData);
 
   if(blfeedbackData){
@@ -38,13 +38,10 @@ const add = async (req: Request, res: Response) => {
       tlTha: tlTha,
       vtlTha: vtlTha,
       remarks:remarks,
-      date:date
+      week: week
     })).save()
     res.send({success: true, message: "Batch Leader Feedback data added!"});
   }
 }
 
 export default add
-
-
-

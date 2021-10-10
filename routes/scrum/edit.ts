@@ -2,6 +2,7 @@ import {Request, Response} from "express";
 import Scrum from "../../models/scrum";
 import getDate from "../../utils/getDate"
 
+// PUT /api/scrum/set
 const edit = async (req: Request, res: Response) => {
   const {userId, thaCount, thaLink, backlog, activity, rating, sawClass} = req.body;
 
@@ -18,10 +19,10 @@ const edit = async (req: Request, res: Response) => {
   const updatedData = await Scrum.update(updatableData,
     {where: {userId: userId, date: date}});
 
-  if(updatedData[0] > 0)
-    res.send({success:true, message: "Updated Scrum Data!"})
+  if (updatedData[0] > 0)
+    res.send({success: true, message: "Updated Scrum Data!"})
   else
-    res.send({success:false, message:"Fill your Scrum Data first!"})
+    res.send({success: false, message: "Fill your Scrum Data first!"})
 
 }
 

@@ -3,7 +3,7 @@ import Team from "../../models/team";
 // @ts-ignore
 import crypto from 'crypto'
 
-// /api/team/create POST
+// POST /api/team/create
 const createTeam = async (req: Request, res: Response) => {
   const {name, batchLeader} = req.body
   if(!name)

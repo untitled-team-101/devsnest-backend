@@ -2,6 +2,7 @@ import {Request, Response} from "express";
 import Scrum from "../../models/scrum";
 import getDate from "../../utils/getDate"
 
+// POST /api/scrum/set
 const edit = async (req: Request, res: Response) => {
   const {userId, thaCount, thaLink, backlog, activity, rating, sawClass} = req.body;
 

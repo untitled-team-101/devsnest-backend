@@ -12,6 +12,7 @@ import roles from '../../utils/roles'
 const BCRYPT_SALT_ROUNDS = Number(process.env.BCRYPT_SALT_ROUNDS || 10)
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "access_token"
 
+// POST /api/user/register
 const register = async (req: Request, res: Response) => {
   const {email, password, name} = req.body;
 

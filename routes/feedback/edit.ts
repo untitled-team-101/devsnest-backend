@@ -1,9 +1,10 @@
 import {Request, Response} from "express";
 import getDate from "../../utils/getDate";
 import BLFeedback from "../../models/blfeedback";
+import getWeek from "../../utils/getWeek";
 
+// PUT /api/feedback/batch-leader
 const edit = async (req: Request, res: Response) => {
-
   const {
     teamId,
     coordination,
@@ -17,7 +18,7 @@ const edit = async (req: Request, res: Response) => {
     remarks
   } = req.body;
 
-  const date = getDate();
+  const week = getWeek()
   let updatableBlfeedbackData = {};
 
   if (typeof coordination === "number") updatableBlfeedbackData = {...updatableBlfeedbackData, coordination};
@@ -30,7 +31,7 @@ const edit = async (req: Request, res: Response) => {
   if (typeof vtlTha === "number") updatableBlfeedbackData = {...updatableBlfeedbackData, vtlTha};
   if (typeof remarks === "string") updatableBlfeedbackData = {...updatableBlfeedbackData, remarks};
 
-  const updatedBlfeedbackData = await BLFeedback.update(updatableBlfeedbackData, {where: {teamId: teamId, date: date}});
+  const updatedBlfeedbackData = await BLFeedback.update(updatableBlfeedbackData, {where: {teamId: teamId, week: week}});
 
   if (updatedBlfeedbackData[0] > 0)
     res.send({success: true, message: "Updated Batch Leader Feedback Data!"})

@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import Scrum from "../../models/scrum";
 import getDate from "../../utils/getDate";
 
+// PUT /api/scrum/attendance
 const attendance = async (req: Request, res: Response) => {
   let { userId, attendance } = req.body;
   const date = getDate();

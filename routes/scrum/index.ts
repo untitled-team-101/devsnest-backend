@@ -4,15 +4,18 @@ import add from "./add"
 import scrumInitialChecks from "../../middlewares/scrumInitialChecks";
 import edit from "./edit"
 import attendance from "./attendance";
-import isAllowedToGiveAttendace from "../../middlewares/attendancePerm";
+import isAllowedToGiveAttendance from "../../middlewares/attendancePerm";
 import view from "./view";
 
 const router = express.Router();
 
-router.post("/set", scrumInitialChecks, add);
+// add new scrum data => admin, member-self, team-leader and vice-team-leader of same team
+router.post("/set", scrumInitialChecks, add)
+// edit scrum data => admin, member-self, team-leader and vice-team-leader of same team
 router.put("/set", edit)
-router.post("/attendance",isAllowedToGiveAttendace, attendance)
+// mark attendance of member => admin, team-leader and vice-team-leader of same team
+router.put("/attendance",isAllowedToGiveAttendance, attendance)
+// view scrum data => admin, members of same team, batch-leader of team
 router.get("/view", view)
-
 
 export default router;

@@ -7,6 +7,7 @@ import jwt from "jsonwebtoken";
 
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || "access_token";
 
+// POST /api.user/login
 const login = async ( req: Request, res: Response) => {
   let { email, password } = req.body;
   const userData: any = await User.findOne({ where: { email } });

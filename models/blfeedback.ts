@@ -43,8 +43,8 @@ const BLFeedback = sequelize.define("blfeedback", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  date: {
-    type: DataTypes.STRING,
+  week: {
+    type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true
   }

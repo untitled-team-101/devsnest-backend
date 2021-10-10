@@ -1,6 +1,7 @@
 import {Request, Response} from "express";
 import Scrum from "../../models/scrum";
 
+// GET /api/scrum/view
 const view = async (req : Request, res : Response) => {
     console.log(req.query);
  const userId = req.query.userid;

@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import User from "../../models/user";
 
-// /api/team/add PUT
+// PUT /api/team/add
 const addMember = async (req: Request, res: Response) => {
   const {teamId, userId} = req.body
   try {
