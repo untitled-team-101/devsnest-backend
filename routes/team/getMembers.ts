@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import User from "../../models/user";
 
-// GET /api/team/add
+// GET /api/team/members
 const getMembers = async (req: Request, res: Response) => {
   const {teamId, idOnly} = req.query
   if(!teamId)

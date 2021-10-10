@@ -1,0 +1,79 @@
+### add role
+PUT http://localhost:4000/api/user/role
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q
+
+{
+  "userId": "a7b17142584244af",
+  "roles": "TL",
+  "action": "ADD"
+}
+
+### user list
+GET http://localhost:4000/api/user/list?role=ADMIN
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q
+
+
+### view user roles
+GET http://localhost:4000/api/user/view?userId=a7b17142584244afd
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q
+
+
+### create team
+POST http://localhost:4000/api/team/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q
+
+{
+  "name": "Untitled"
+}
+
+### delete team
+DELETE http://localhost:4000/api/team/delete?teamId=47029c466718
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+
+### add team member
+PUT http://localhost:4000/api/team/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+{
+  "teamId": "47029c466718",
+  "userId": "d58e8dfdce20bbd9"
+}
+
+
+### remove team member
+PUT http://localhost:4000/api/team/remove
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+{
+  "teamId": "3754dc4a4213",
+  "userId": "b3b3c1d250c9de51"
+}
+
+
+### add bl
+PUT http://localhost:4000/api/team/add-bl
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzQwZWI1MWM1MGE4ZGI2Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2RoQGRldnNuZXQuY29tIiwiaWF0IjoxNjMzODc4ODA4LCJleHAiOjE2MzQ0ODM2MDh9.9C1-18SDOUv38Yg7f7JKCes6Y7E-nvXAI3tANPBLDIY
+
+{
+  "userId": "c740eb51c50a8db6",
+  "teamId": "86adfe"
+}
+
+### get list of teams
+GET http://localhost:4000/api/team/list?name=led
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q
+
+### view Batch Leader of teams
+GET http://localhost:4000/api/team/view-bl?teamId=bumchikc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxYjE4NTAyNDUxNzhiNTk1Iiwicm9sZXMiOlsiVVNFUiJdLCJuYW1lIjoiUGl5dXNoIE5hZG9kYSIsImVtYWlsIjoicGl5dXNoQHV0LmNvbSIsImlhdCI6MTYzMzg5MzIwNywiZXhwIjoxNjM0NDk4MDA3fQ.NkORHVqFq2hayd_WLlzjjof1pdnBrZ1YZAqOCcwscHY
