@@ -8,6 +8,7 @@ import getMembers from "./getMembers";
 import listTeams from "./listTeams";
 import getTeams from "./getTeams";
 import deleteTeam from "./deleteTeam";
+import addBatchLeader from "./addBatchLeader";
 
 const router = express.Router();
 
@@ -27,5 +28,7 @@ router.get("/list", checkAdmin, listTeams)
 // get team assigned to user and team(s) of batch leader => member, batch-leader
 // if not a batch leader list self team
 router.get("/get", getTeams)
+// add batch leader to a team => admin
+router.put("/add-bl", addBatchLeader);
 
 export default router;
