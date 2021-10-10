@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import User from "../../models/user";
+
 // GET /api/user/list
 const list = async (req: Request, res: Response) => {
   const { userid, name, email, role } = req.query;  
