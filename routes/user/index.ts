@@ -8,6 +8,7 @@ import listRouter from "./list";
 import registerInitialChecks from "../../middlewares/registerInitialChecks";
 import checkSigned from "../../middlewares/checkSigned";
 import checkAdmin from "../../middlewares/checkAdmin";
+import viewRoles from "./viewRoles";
 
 const router = express.Router()
 
@@ -19,7 +20,9 @@ router.post("/login", loginRouter)
 router.all("/verify", checkSigned, verifyRouter)
 // change role of user => admin
 router.put("/role",checkSigned, checkAdmin, roleRouter)
-// get user list => admin {
+// get user list => admin
 router.get("/list",checkSigned, checkAdmin, listRouter)
+// get user's roles => admin
+router.get('/view', checkSigned, checkAdmin ,viewRoles)
 
 export default router

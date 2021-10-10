@@ -10,6 +10,7 @@ import getTeams from "./getTeams";
 import deleteTeam from "./deleteTeam";
 import addBatchLeader from "./addBatchLeader";
 import isAllowedToGetMembersList from "../../middlewares/isAllowedToGetMembersList";
+import viewBatchLeader from "./viewBatchLeader";
 
 const router = express.Router();
 
@@ -31,5 +32,7 @@ router.get("/list", checkAdmin, listTeams)
 router.get("/get", getTeams)
 // add batch leader to a team => admin
 router.put("/add-bl", addBatchLeader);
+
+router.get("/view-bl", viewBatchLeader);
 
 export default router;
