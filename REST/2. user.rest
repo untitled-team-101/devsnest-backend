@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "name": "Piyush Nadoda",
-  "email": "piyush@utt.com",
+  "email": "piyush@utdt.com",
   "password": "Bahubali@123",
   "confirmPassword": "Bahubali@123"
 }
@@ -21,31 +21,28 @@ Content-Type: application/json
 }
 
 ### verify login
-
-
 GET http://localhost:4000/api/user/verify
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q
 
 ### add role
-
 PUT http://localhost:4000/api/user/role
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q
 
 {
-  "userId": "78800b5771d576e7",
+  "userId": "a7b17142584244af",
   "roles": "TL",
-  "action": "REMOVE"
+  "action": "ADD"
 }
 
 ### user list
-GET http://localhost:4000/api/user/list
+GET http://localhost:4000/api/user/list?role=ADMIN
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q
 
 
 ### view user roles
-GET http://localhost:4000/api/user/view?userId=c740eb51c50a8db6
+GET http://localhost:4000/api/user/view?userId=a7b17142584244afd
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzQwZWI1MWM1MGE4ZGI2Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2RoQGRldnNuZXQuY29tIiwiaWF0IjoxNjMzODc4ODA4LCJleHAiOjE2MzQ0ODM2MDh9.9C1-18SDOUv38Yg7f7JKCes6Y7E-nvXAI3tANPBLDIY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhN2IxNzE0MjU4NDI0NGFmIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXR0LmNvbSIsImlhdCI6MTYzMzg5NjkyNywiZXhwIjoxNjM0NTAxNzI3fQ.xJXpAD913l-vsh2B2VwWcufuQ8tMVLzLYSRWijKOb7Q

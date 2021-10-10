@@ -9,7 +9,7 @@ const listTeams = async (req: Request, res: Response) => {
 
   res.send({
     message: teamData,
-    success: false
+    success: true
   })
 }
 
