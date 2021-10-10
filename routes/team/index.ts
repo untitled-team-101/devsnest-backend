@@ -8,6 +8,7 @@ import getMembers from "./getMembers";
 import listTeams from "./listTeams";
 import getTeams from "./getTeams";
 import deleteTeam from "./deleteTeam";
+import isAllowedToGetMembersList from "../../middlewares/isAllowedToGetMembersList";
 
 const router = express.Router();
 
@@ -21,7 +22,7 @@ router.put("/add", checkAdmin, addMember)
 // remove member of a team => admin
 router.put("/remove", checkAdmin, removeMember)
 // get members of a team => admin, same-team, team-bl
-router.get("/members", getMembers)
+router.get("/members",isAllowedToGetMembersList, getMembers)
 // get all teams => admin
 router.get("/list", checkAdmin, listTeams)
 // get team assigned to user and team(s) of batch leader => member, batch-leader

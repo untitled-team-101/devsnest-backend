@@ -6,8 +6,9 @@ import crypto from 'crypto'
 // DELETE /api/team/delete
 const deleteTeam = async (req: Request, res: Response) => {
   const {teamId} = req.query
+  await Team.destroy({where:{teamId}})
   return res.send({
-    success: false,
+    success: true,
   })
 }
 

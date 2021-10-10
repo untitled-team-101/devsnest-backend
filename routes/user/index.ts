@@ -18,8 +18,8 @@ router.post("/login", loginRouter)
 // check if signed in on reload => user
 router.all("/verify", checkSigned, verifyRouter)
 // change role of user => admin
-router.put("/role", checkAdmin, roleRouter)
+router.put("/role",checkSigned, checkAdmin, roleRouter)
 // get user list => admin {
-router.get("/list", checkAdmin, listRouter)
+router.get("/list",checkSigned, checkAdmin, listRouter)
 
 export default router

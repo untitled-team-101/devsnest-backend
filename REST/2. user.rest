@@ -1,0 +1,45 @@
+### register user
+POST http://localhost:4000/api/user/register
+Content-Type: application/json
+
+{
+  "name": "Piyush Nadoda",
+  "email": "piyush@utt.com",
+  "password": "Bahubali@123",
+  "confirmPassword": "Bahubali@123"
+}
+
+### login user
+POST http://localhost:4000/api/user/login
+Content-Type: application/json
+
+{
+  "name": "Piyush Nadoda",
+  "email": "piyush@utt.com",
+  "password": "Bahubali@123",
+  "confirmPassword": "Bahubali@123"
+}
+
+### verify login
+
+
+GET http://localhost:4000/api/user/verify
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+### add role
+
+PUT http://localhost:4000/api/user/role
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+{
+  "userId": "78800b5771d576e7",
+  "roles": "TL",
+  "action": "REMOVE"
+}
+
+### user list
+GET http://localhost:4000/api/user/list
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk

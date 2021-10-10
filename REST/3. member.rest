@@ -1,0 +1,54 @@
+### create team
+POST http://localhost:4000/api/team/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+
+{
+  "name": "Untitled 2"
+}
+
+
+### delete team
+DELETE http://localhost:4000/api/team/delete?teamId=47029c466718
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+
+### add team member
+PUT http://localhost:4000/api/team/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+{
+  "teamId": "47029c466718",
+  "userId": "d58e8dfdce20bbd9"
+}
+
+
+### remove team member
+PUT http://localhost:4000/api/team/remove
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+{
+  "teamId": "3754dc4a4213",
+  "userId": "b3b3c1d250c9de51"
+}
+
+
+### get list of team members
+GET http://localhost:4000/api/team/members?teamId=47029c466718
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+### get list of teams
+GET http://localhost:4000/api/team/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
+
+
+### get team assigned to user and team(s) of batch leader
+GET http://localhost:4000/api/team/get
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
