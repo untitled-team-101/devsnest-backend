@@ -1,9 +1,9 @@
 POST http://localhost:4000/api/scrum/set
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmJhNTFhMmVmNDVkODcyIiwiZW1haWwiOiJHb2JsaW5AZGV2c25ldC5jb20iLCJuYW1lIjoiR29ibGluIFNhbmdlciIsInJvbGUiOiJbXCJVU0VSXCJdIiwiaWF0IjoxNjMzODAyMDQ5LCJleHAiOjE2MzQ0MDY4NDl9.LReF0WCxst3-QvSXw4CMSDjAVf2S7ecvS8ZdZOaFxPU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2IzYzFkMjUwYzlkZTUxIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODU0NjYyLCJleHAiOjE2MzQ0NTk0NjJ9.ySHmaFkUliRcCSavxUpRQQ67OfYvyqgqhvWk2-D9-yc
 
 {
-  "userId":"22ba51a2ef45d872",
+  "userId":"b3b3c1d250c9de51",
   "attendance": true,
   "thaCount": 55,
   "thaLink": "https://github.com/untitled-team-101/devsnest-backend/pull/4/files",
@@ -16,22 +16,24 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmJhNTFhMmVm
 ###
 PUT http://localhost:4000/api/scrum/set
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2IzYzFkMjUwYzlkZTUxIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODU0NjYyLCJleHAiOjE2MzQ0NTk0NjJ9.ySHmaFkUliRcCSavxUpRQQ67OfYvyqgqhvWk2-D9-yc
 
 {
-  "userId": "667a8c748b60ec88",
+  "userId": "b3b3c1d250c9de51",
   "thaCount": 69
 }
 
 ###
 POST http://localhost:4000/api/scrum/attendance
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNjUyYTVhNDg5OTFkNjhiIiwicm9sZSI6IltcIlVTRVJcIixcIlRMXCJdIiwibmFtZSI6IlBpeXVzaCBOYWRvZGEiLCJlbWFpbCI6InBpeXVzaEB1dC5jb20iLCJpYXQiOjE2MzM3OTk3MzAsImV4cCI6MTYzNDQwNDUzMH0._P2rXCf861Efvnav0grdbcAuRD4657b0krsTo2wbo9M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2IzYzFkMjUwYzlkZTUxIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODU0NjYyLCJleHAiOjE2MzQ0NTk0NjJ9.ySHmaFkUliRcCSavxUpRQQ67OfYvyqgqhvWk2-D9-yc
 
 {
-  "userId": "667a8c748b60ec88",
+  "userId": "b3b3c1d250c9de51",
   "attendance": true
 }
 
 ###
-GET http://localhost:4000/api/scrum/view?userid=667a8c748b60ec88&date=2021-10-09
+GET http://localhost:4000/api/scrum/view?userid=b3b3c1d250c9de51&date=2021-10-10
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2IzYzFkMjUwYzlkZTUxIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODU0NjYyLCJleHAiOjE2MzQ0NTk0NjJ9.ySHmaFkUliRcCSavxUpRQQ67OfYvyqgqhvWk2-D9-yc

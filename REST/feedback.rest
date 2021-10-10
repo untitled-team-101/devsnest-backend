@@ -1,13 +1,13 @@
 POST http://localhost:4000/api/blfeedback/feedback
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmJhNTFhMmVmNDVkODcyIiwiZW1haWwiOiJHb2JsaW5AZGV2c25ldC5jb20iLCJuYW1lIjoiR29ibGluIFNhbmdlciIsInJvbGUiOiJbXCJVU0VSXCJdIiwiaWF0IjoxNjMzODAyMDQ5LCJleHAiOjE2MzQ0MDY4NDl9.LReF0WCxst3-QvSXw4CMSDjAVf2S7ecvS8ZdZOaFxPU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2IzYzFkMjUwYzlkZTUxIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODU0NjYyLCJleHAiOjE2MzQ0NTk0NjJ9.ySHmaFkUliRcCSavxUpRQQ67OfYvyqgqhvWk2-D9-yc
 
 {
-  "teamId": "12312jn213",
+  "teamId": "3754dc4a4213",
   "coordination": 3,
   "tlAvailability": 1,
   "vtlAvailability": 2,
-  "doubtTaker": "Ayan",
+  "doubtTakers": "Ayan",
   "rating": 3,
   "videoScrum": true,
   "tlTha": 10,
@@ -16,3 +16,8 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmJhNTFhMmVm
 }
 
 ###
+
+
+GET http://localhost:4000/api/blfeedback/view?teamid=3754dc4a4213&date=2021-10-10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2IzYzFkMjUwYzlkZTUxIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODU0NjYyLCJleHAiOjE2MzQ0NTk0NjJ9.ySHmaFkUliRcCSavxUpRQQ67OfYvyqgqhvWk2-D9-yc
