@@ -31,7 +31,7 @@ router.get("/list", checkAdmin, listTeams)
 // if not a batch leader list self team
 router.get("/get", getTeams)
 // add batch leader to a team => admin
-router.put("/add-bl", addBatchLeader);
+router.put("/add-bl",checkAdmin, addBatchLeader);
 
 router.get("/view-bl", viewBatchLeader);
 
