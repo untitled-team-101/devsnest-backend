@@ -6,7 +6,13 @@ const isAllowedToSetScrumData =  async (req : any , res : Response, next : NextF
     const user = req.user;
     const {userId} = req.body;
     if(user.userId === userId || user.roles.indexOf(Roles.admin) > -1){
+        if(user.teamId){
         next();
+    }else{
+        res.send({
+            message: "user must be in team"
+        })
+    }
     }else{
         const userData : any = await User.findOne({where:{userId}})
         if(user.roles.indexOf(Roles.tl) > -1 || user.roles.indexOf(Roles.vtl) > -1 && user.teamId === userData.teamId){

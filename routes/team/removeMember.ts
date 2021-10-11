@@ -9,6 +9,7 @@ const removeMember = async (req: Request, res: Response) => {
   if (user.teamId === teamId) {
     await User.update({ teamId: "" }, { where: { userId } });
     res.send({
+      message: "Member removed from team successfully",
       success: true,
     });
   } else {

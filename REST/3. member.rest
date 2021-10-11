@@ -9,3 +9,24 @@ GET http://localhost:4000/api/team/get
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ODgwMGI1NzcxZDU3NmU3Iiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl0sIm5hbWUiOiJQaXl1c2ggTmFkb2RhIiwiZW1haWwiOiJwaXl1c2hAdXQuY29tIiwiaWF0IjoxNjMzODc2MzY5LCJleHAiOjE2MzQ0ODExNjl9.pYaQGJCuoS9xiyCbBIRNpfK4aTyXyP4R5gB0Fzz6Snk
 
+
+###
+POST http://localhost:4000/api/scrum/set
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkNThlOGRmZGNlMjBiYmQ5Iiwicm9sZXMiOlsiVVNFUiJdLCJuYW1lIjoiUGl5dXNoIE5hZG9kYSIsImVtYWlsIjoicGl5dXNoQHV0dC5jb20iLCJpYXQiOjE2MzM5NDk2NjgsImV4cCI6MTYzNDU1NDQ2OH0.GSjL7OST95C7js5TUGsXYYnAgQkpIROmjgIOD5-NMLk
+
+{
+  "userId":"d58e8dfdce20bbd9",
+  "attendance": false,
+  "thaCount": 55,
+  "thaLink": "https://github.com/untitled-team-101/devsnest-backend/pull/4/files",
+  "backlog": "distro hopping",
+  "activity": "nacha",
+  "rating": 4,
+  "sawClass": false
+}
+
+###
+GET http://localhost:4000/api/scrum/view?userId=d58e8dfdce20bbd9&date=2021-10-11
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkNThlOGRmZGNlMjBiYmQ5Iiwicm9sZXMiOlsiVVNFUiJdLCJuYW1lIjoiUGl5dXNoIE5hZG9kYSIsImVtYWlsIjoicGl5dXNoQHV0dC5jb20iLCJpYXQiOjE2MzM5NDk2NjgsImV4cCI6MTYzNDU1NDQ2OH0.GSjL7OST95C7js5TUGsXYYnAgQkpIROmjgIOD5-NMLk

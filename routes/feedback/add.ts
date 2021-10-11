@@ -21,8 +21,6 @@ const add = async (req: Request, res: Response) => {
 
   const week = getWeek()
   const blfeedbackData = await BLFeedback.findOne({where: {teamId, week}});
-  console.log(blfeedbackData);
-
   if(blfeedbackData){
     res.send({success: false, message: "Batch Leader Feedback already added! You can only edit it!"})
   }

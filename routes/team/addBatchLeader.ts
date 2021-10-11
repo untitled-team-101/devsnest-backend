@@ -11,8 +11,6 @@ const addBatchLeader = async (req: any, res: Response) => {
     { where: { teamId: teamId } }
   );
 
-  console.log(updatedData);
-
   if (updatedData[0] > 0) {
     const user: any = await User.findOne({ where: { userId } });
     if (user.roles.indexOf(Roles.bl) === -1) {

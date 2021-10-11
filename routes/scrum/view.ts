@@ -3,7 +3,7 @@ import Scrum from "../../models/scrum";
 
 // GET /api/scrum/view
 const view = async (req: Request, res: Response) => {
-  const userId = req.query.userid;
+  const userId = req.query.userId;
   const date = req.query.date;
 
   const data: any = await Scrum.findOne({ where: { userId, date } });
