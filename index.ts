@@ -1,25 +1,23 @@
-import './env'
+import "./env";
 // @ts-ignore
-import Express, {Request, Response} from 'express'
-import apiRouter from './routes'
+import Express, { Request, Response } from "express";
+import apiRouter from "./routes";
 import database from "./utils/database";
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4000;
 const app = Express();
 
-app.use(Express.json())
+app.use(Express.json());
 
-app.use('/api', apiRouter)
+app.use("/api", apiRouter);
 
 app.use("/", (req: Request, res: Response) => {
-  res.status(404)
-    .send("Not Found")
-})
+  res.status(404).send("Not Found");
+});
 
-database.sync()
-  .then(() => {
-    console.log("Connected to database")
-    app.listen(PORT, () => {
-      console.log(`App running on ${PORT}`)
-    })
-  })
+database.sync().then(() => {
+  console.log("Connected to database");
+  app.listen(PORT, () => {
+    console.log(`App running on ${PORT}`);
+  });
+});

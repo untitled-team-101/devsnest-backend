@@ -1,11 +1,11 @@
-import {DataTypes} from "sequelize";
+import { DataTypes } from "sequelize";
 import sequelize from "../utils/database";
 
 const Team = sequelize.define("team", {
   teamId: {
     type: DataTypes.STRING,
     allowNull: false,
-    primaryKey: true
+    primaryKey: true,
   },
   name: {
     type: DataTypes.STRING,
@@ -13,8 +13,8 @@ const Team = sequelize.define("team", {
   },
   batchLeader: {
     type: DataTypes.STRING,
-    allowNull: true
+    allowNull: true,
   },
-})
+});
 
 export default Team;

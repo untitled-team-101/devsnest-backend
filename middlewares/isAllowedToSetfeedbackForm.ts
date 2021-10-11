@@ -9,11 +9,16 @@ const isAllowedToSetFeedbackForm = async (
   next: NextFunction
 ) => {
   const roles = req.user.roles;
-  const isBatchLeaderOrAdmin = roles.find((role: String) => role === Roles.bl || role === Roles.admin);
+  const isBatchLeaderOrAdmin = roles.find(
+    (role: String) => role === Roles.bl || role === Roles.admin
+  );
   if (isBatchLeaderOrAdmin) {
-    const {teamId} = req.body;
+    const { teamId } = req.body;
     const team: any = await Team.findOne({ where: { teamId } });
-    if (req.user.roles.find((role : String )=> role === Roles.admin) || team.batchLeader === req.user.userId) {
+    if (
+      req.user.roles.find((role: String) => role === Roles.admin) ||
+      team.batchLeader === req.user.userId
+    ) {
       next();
     } else {
       res.status(200).json({

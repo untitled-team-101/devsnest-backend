@@ -1,11 +1,11 @@
-import {DataTypes} from "sequelize";
+import { DataTypes } from "sequelize";
 import sequelize from "../utils/database";
 
 const Scrum = sequelize.define("scrum", {
   date: {
     type: DataTypes.STRING,
     allowNull: false,
-    primaryKey:true
+    primaryKey: true,
   },
   attendance: {
     type: DataTypes.BOOLEAN,
@@ -35,10 +35,10 @@ const Scrum = sequelize.define("scrum", {
     type: DataTypes.BOOLEAN,
     allowNull: false,
   },
-  userId:{
+  userId: {
     type: DataTypes.STRING,
-    primaryKey: true
-  }
+    primaryKey: true,
+  },
 });
 
 export default Scrum;

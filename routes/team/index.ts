@@ -15,23 +15,23 @@ import viewBatchLeader from "./viewBatchLeader";
 const router = express.Router();
 
 // create a new team => admin
-router.post("/create", checkAdmin, createTeam)
+router.post("/create", checkAdmin, createTeam);
 // delete a team => admin
-router.delete("/delete", checkAdmin, deleteTeam)
+router.delete("/delete", checkAdmin, deleteTeam);
 // add member to a team => admin
 // remove from previous team if any
-router.put("/add", checkAdmin, addMember)
+router.put("/add", checkAdmin, addMember);
 // remove member of a team => admin
-router.put("/remove", checkAdmin, removeMember)
+router.put("/remove", checkAdmin, removeMember);
 // get members of a team => admin, same-team, team-bl
-router.get("/members",isAllowedToGetMembersList, getMembers)
+router.get("/members", isAllowedToGetMembersList, getMembers);
 // get all teams => admin
-router.get("/list", checkAdmin, listTeams)
+router.get("/list", checkAdmin, listTeams);
 // get team assigned to user and team(s) of batch leader => member, batch-leader
 // if not a batch leader list self team
-router.get("/get", getTeams)
+router.get("/get", getTeams);
 // add batch leader to a team => admin
-router.put("/add-bl",checkAdmin, addBatchLeader);
+router.put("/add-bl", checkAdmin, addBatchLeader);
 
 router.get("/view-bl", viewBatchLeader);
 

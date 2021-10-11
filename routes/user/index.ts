@@ -1,28 +1,28 @@
 // @ts-ignore
-import express from 'express'
-import registerRouter from "./register"
-import loginRouter from "./login"
-import roleRouter from "./role"
-import verifyRouter from "./verify"
+import express from "express";
+import registerRouter from "./register";
+import loginRouter from "./login";
+import roleRouter from "./role";
+import verifyRouter from "./verify";
 import listRouter from "./list";
 import registerInitialChecks from "../../middlewares/registerInitialChecks";
 import checkSigned from "../../middlewares/checkSigned";
 import checkAdmin from "../../middlewares/checkAdmin";
 import viewRoles from "./viewRoles";
 
-const router = express.Router()
+const router = express.Router();
 
 // create new user => anyone
-router.post("/register", registerInitialChecks, registerRouter)
+router.post("/register", registerInitialChecks, registerRouter);
 // login a user => anyone
-router.post("/login", loginRouter)
+router.post("/login", loginRouter);
 // check if signed in on reload => user
-router.all("/verify", checkSigned, verifyRouter)
+router.all("/verify", checkSigned, verifyRouter);
 // change role of user => admin
-router.put("/role",checkSigned, checkAdmin, roleRouter)
+router.put("/role", checkSigned, checkAdmin, roleRouter);
 // get user list => admin
-router.get("/list",checkSigned, checkAdmin, listRouter)
+router.get("/list", checkSigned, checkAdmin, listRouter);
 // get user's roles => admin
-router.get('/view', checkSigned, checkAdmin ,viewRoles)
+router.get("/view", checkSigned, checkAdmin, viewRoles);
 
-export default router
+export default router;

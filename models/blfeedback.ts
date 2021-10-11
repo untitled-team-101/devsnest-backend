@@ -1,11 +1,11 @@
-import sequelize from '../utils/database'
-import {DataTypes} from "sequelize";
+import sequelize from "../utils/database";
+import { DataTypes } from "sequelize";
 
 const BLFeedback = sequelize.define("blfeedback", {
-  teamId:{
-    type:DataTypes.STRING,
-    allowNull:false,
-    primaryKey: true
+  teamId: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    primaryKey: true,
   },
   coordination: {
     type: DataTypes.INTEGER, // 1-5
@@ -46,8 +46,8 @@ const BLFeedback = sequelize.define("blfeedback", {
   week: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    primaryKey: true
-  }
-})
+    primaryKey: true,
+  },
+});
 
 export default BLFeedback;

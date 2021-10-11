@@ -5,10 +5,13 @@ const view = async (req: any, res: Response) => {
   const teamId = req.query.teamid;
   const week = req.query.week;
   console.log(req.query);
-  
+
   const data: any = await BLFeedback.findOne({ where: { teamId, week } });
   if (data) {
-    res.status(200).send({teamId: teamId,
+    res
+      .status(200)
+      .send({
+        teamId: teamId,
         coordination: data.coordination,
         tlAvailability: data.tlAvailability,
         vtlAvailability: data.vtlAvailability,
@@ -17,12 +20,12 @@ const view = async (req: any, res: Response) => {
         videoScrum: data.videoScrum,
         tlTha: data.tlTha,
         vtlTha: data.vtlTha,
-        remarks:data.remarks,
-        week: data.week
-    });
+        remarks: data.remarks,
+        week: data.week,
+      });
   } else {
     res.status(200).json({
-      message: 'there is nothing',
+      message: "there is nothing",
       success: false,
     });
   }

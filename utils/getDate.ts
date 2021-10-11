@@ -10,12 +10,12 @@ const getDate = () => {
     };
     const day = () => {
       if (currentDate.getDate() <= 9) {
-        return "0" + currentDate.getDate()
+        return "0" + currentDate.getDate();
       } else {
         return currentDate.getDate();
       }
     };
-    return `${currentDate.getFullYear()}-${month()}-${day()}`
+    return `${currentDate.getFullYear()}-${month()}-${day()}`;
   };
   return today();
 };

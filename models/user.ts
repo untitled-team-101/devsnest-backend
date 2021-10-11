@@ -1,5 +1,5 @@
-import sequelize from "../utils/database"
-import {DataTypes} from "sequelize"
+import sequelize from "../utils/database";
+import { DataTypes } from "sequelize";
 
 const User = sequelize.define("user", {
   userId: {
@@ -9,24 +9,24 @@ const User = sequelize.define("user", {
   },
   name: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   password: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   roles: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   teamId: {
     type: DataTypes.STRING,
-    allowNull: true
-  }
-})
+    allowNull: true,
+  },
+});
 
-export default User
+export default User;

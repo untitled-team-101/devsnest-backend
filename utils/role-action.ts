@@ -1,5 +1,5 @@
 const actions = {
   add: "ADD",
-  remove: "REMOVE"
-}
+  remove: "REMOVE",
+};
 export default actions;

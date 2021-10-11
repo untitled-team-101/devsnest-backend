@@ -5,6 +5,6 @@ const Roles = {
   vtl: "VTL", // if vice team leader of a team
   bl: "BL", // if batch leader of team(s)
   admin: "ADMIN", // if admin of the site
-}
+};
 
-export default Roles
+export default Roles;

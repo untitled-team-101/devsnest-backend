@@ -15,7 +15,7 @@ const attendance = async (req: Request, res: Response) => {
       { attendance: attendance },
       { where: { userId: userId, date: date } }
     );
-    
+
     res.status(200).json({
       message: "attedance updated",
       success: true,
@@ -25,8 +25,7 @@ const attendance = async (req: Request, res: Response) => {
       message: "user needs to fill the scrumsheet",
       success: false,
     });
-    console.log('ERR');
-    
+    console.log("ERR");
   }
 };
 
